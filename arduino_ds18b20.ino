@@ -1,6 +1,7 @@
 /*
   Arduino DS18B20
 
+  Created: 04/20/2016
   By Gus
   Modified N/A
   By Gus
@@ -20,7 +21,9 @@ float temperature = 0;			//Variable to store the temperature in
 int lowerLimit = 15;			//define the lower threshold for the temperature
 int higherLimit = 35;			//define the upper threshold for the temperature
 
+OneWire oneWirePin(temp_sensor);
 
+DallasTemperature sensors(&oneWirePin);
 
 void setup(void){
   Serial.begin(9600);
