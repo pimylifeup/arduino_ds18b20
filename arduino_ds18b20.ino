@@ -19,7 +19,7 @@ int temp_sensor = 5;       // Pin DS18B20 Sensor is connected to
 
 float temperature = 0;			//Variable to store the temperature in
 int lowerLimit = 15;			//define the lower threshold for the temperature
-int higherLimit = 35;			//define the upper threshold for the temperature
+int upperLimit = 35;			//define the upper threshold for the temperature
 
 OneWire oneWirePin(temp_sensor);
 
@@ -55,11 +55,11 @@ void loop(){
     Serial.println(", Yellow LED is Activated");
     digitalWrite(yellowLedPin, HIGH);
   }
-  else if(temperature > lowerLimit && temperature < higherLimit){
+  else if(temperature > lowerLimit && temperature < upperLimit){
     Serial.println(", Green LED is Activated");
     digitalWrite(greenLedPin, HIGH);
   }
-  else if(temperature >= higherLimit){
+  else if(temperature >= upperLimit){
     Serial.println(", Red LED is Activated");
     digitalWrite(redLedPin, HIGH);
   }
