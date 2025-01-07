@@ -6,7 +6,7 @@
   Modified N/A
   By Gus
 
-  https://arduinomylifeup.com/arduino-ds18b20-temperature-sensor
+  https://pimylifeup.com/arduino-ds18b20-temperature-sensor/
 */
 #include <OneWire.h>
 #include <DallasTemperature.h>
